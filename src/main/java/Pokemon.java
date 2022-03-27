@@ -11,13 +11,15 @@ public class Pokemon {
     private Tipo2 tipo2;
     private Estadisticas estadisticas;
     private Movimientos movimientos;
+    private Objeto objeto;
 
-    public Pokemon(String nombre, Tipo1 tipo1, Tipo2 tipo2, Estadisticas estadisticas, Movimientos movimientos) {
+    public Pokemon(String nombre, Tipo1 tipo1, Tipo2 tipo2, Estadisticas estadisticas, Movimientos movimientos,Objeto objeto) {
         this.nombre = nombre;
         this.tipo1 = tipo1;
         this.tipo2 = tipo2;
         this.estadisticas = estadisticas;
         this.movimientos = movimientos;
+        this.objeto= objeto;
     }
 
     public String getNombre() {
@@ -60,17 +62,25 @@ public class Pokemon {
         this.movimientos = movimientos;
     }
 
+    public Objeto getObjeto() {
+        return objeto;
+    }
+
+    public void setObjeto(Objeto objeto) {
+        this.objeto = objeto;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Pokemon pokemon = (Pokemon) o;
-        return nombre.equals(pokemon.nombre) && tipo1 == pokemon.tipo1 && tipo2 == pokemon.tipo2 && estadisticas.equals(pokemon.estadisticas) && movimientos.equals(pokemon.movimientos);
+        return nombre.equals(pokemon.nombre) && tipo1 == pokemon.tipo1 && tipo2 == pokemon.tipo2 && estadisticas.equals(pokemon.estadisticas) && movimientos.equals(pokemon.movimientos)&& objeto.equals(pokemon.objeto);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nombre, tipo1, tipo2, estadisticas, movimientos);
+        return Objects.hash(nombre, tipo1, tipo2, estadisticas, movimientos,objeto);
     }
 
     @Override
@@ -81,6 +91,7 @@ public class Pokemon {
                 ", tipo2=" + tipo2 +
                 ", estadisticas=" + estadisticas +
                 ", movimientos=" + movimientos +
+                ", objeto=" + objeto +
                 '}';
     }
 }

@@ -5,12 +5,12 @@ import java.util.Objects;
 public class Ataque {
 
     private int ivs;
-    private int evs;
+    private int puntosEvasion;
     private int atack;
 
     public Ataque(int ivs, int evs, int atack) {
         this.ivs = ivs;
-        this.evs = evs;
+        this.puntosEvasion = evs;
         this.atack = atack;
     }
 
@@ -23,11 +23,11 @@ public class Ataque {
     }
 
     public int getEvs() {
-        return evs;
+        return puntosEvasion;
     }
 
     public void setEvs(int evs) {
-        this.evs = evs;
+        this.puntosEvasion = evs;
     }
 
     public int getAtack() {
@@ -43,19 +43,19 @@ public class Ataque {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ataque ataque = (Ataque) o;
-        return ivs == ataque.ivs && evs == ataque.evs && atack == ataque.atack;
+        return ivs == ataque.ivs && puntosEvasion == ataque.puntosEvasion && atack == ataque.atack;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ivs, evs, atack);
+        return Objects.hash(ivs, puntosEvasion, atack);
     }
 
     @Override
     public String toString() {
         return "Ataque{" +
                 "ivs=" + ivs +
-                ", evs=" + evs +
+                ", evs=" + puntosEvasion +
                 ", atack=" + atack +
                 '}';
     }
