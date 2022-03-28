@@ -119,7 +119,7 @@ public class Prueba {
                 eficacia = 2;
             }
 
-            if ((defensivo.getTipo1().equals(Tipo1.AGUA) || defensivo.getTipo2().equals(Tipo2.AGUA) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo2().equals(Tipo2.VOLADOR)) && (defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.DRAGON) || defensivo.getTipo2().equals(Tipo2.DRAGON))) {
+            if ((defensivo.getTipo1().equals(Tipo1.AGUA) || defensivo.getTipo2().equals(Tipo2.AGUA) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo2().equals(Tipo2.VOLADOR)) && (defensivo.getTipo1().equals(Tipo1.PLANTA)|| defensivo.getTipo2().equals(Tipo2.PLANTA) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.DRAGON) || defensivo.getTipo2().equals(Tipo2.DRAGON))) {
                 eficacia = 1;
             }
             if ((defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo2().equals(Tipo2.PLANTA) || defensivo.getTipo1().equals(Tipo1.DRAGON) || defensivo.getTipo2().equals(Tipo2.DRAGON) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO))) {
@@ -170,6 +170,62 @@ public class Prueba {
             }
 
             if ((defensivo.getTipo1().equals(Tipo1.NORMAL) || defensivo.getTipo1().equals(Tipo1.ROCA) || defensivo.getTipo1().equals(Tipo1.HIELO) || defensivo.getTipo1().equals(Tipo1.ACERO) || defensivo.getTipo1().equals(Tipo1.SINIESTRO) || defensivo.getTipo2().equals(Tipo2.NORMAL) || defensivo.getTipo2().equals(Tipo2.ROCA) || defensivo.getTipo2().equals(Tipo2.HIELO) || defensivo.getTipo2().equals(Tipo2.ACERO) || defensivo.getTipo2().equals(Tipo2.SINIESTRO)) && (defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo1().equals(Tipo1.PSIQUICO) || defensivo.getTipo1().equals(Tipo1.BICHO) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.VOLADOR) || defensivo.getTipo2().equals(Tipo2.PSIQUICO) || defensivo.getTipo2().equals(Tipo2.BICHO) || defensivo.getTipo2().equals(Tipo2.HADA))) {
+                eficacia = 1;
+            }
+
+            if ((defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo1().equals(Tipo1.PSIQUICO) || defensivo.getTipo1().equals(Tipo1.BICHO) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.VOLADOR) || defensivo.getTipo2().equals(Tipo2.PSIQUICO) || defensivo.getTipo2().equals(Tipo2.BICHO) || defensivo.getTipo2().equals(Tipo2.HADA))) {
+                eficacia = 0.5;
+            }
+
+            if ((defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo1().equals(Tipo1.PSIQUICO) || defensivo.getTipo1().equals(Tipo1.BICHO) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.VOLADOR) || defensivo.getTipo2().equals(Tipo2.PSIQUICO) || defensivo.getTipo2().equals(Tipo2.BICHO) || defensivo.getTipo2().equals(Tipo2.HADA)) && (defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo1().equals(Tipo1.PSIQUICO) || defensivo.getTipo1().equals(Tipo1.BICHO) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.VOLADOR) || defensivo.getTipo2().equals(Tipo2.PSIQUICO) || defensivo.getTipo2().equals(Tipo2.BICHO) || defensivo.getTipo2().equals(Tipo2.HADA))) {
+                eficacia = 0.25;
+            }
+            if (defensivo.getTipo1().equals(Tipo1.FANTASMA) || defensivo.getTipo1().equals(Tipo2.FANTASMA)) {
+                eficacia = 0;
+
+            } else {
+                eficacia = 1;
+            }
+
+        } else if (movimiento.getTipo1().equals(Tipo1.VENENO)) {
+
+
+            if ((defensivo.getTipo1().equals(Tipo1.PLANTA)&& defensivo.getTipo2().equals(Tipo2.HADA)) || ((defensivo.getTipo1().equals(Tipo1.HADA) && defensivo.getTipo2().equals(Tipo2.PLANTA)))) {
+                eficacia = 4;
+            }
+
+            if (defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo2().equals(Tipo2.PLANTA) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.HADA)) {
+                eficacia = 2;
+            }
+
+            if ((defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo2().equals(Tipo2.PLANTA) || defensivo.getTipo1().equals(Tipo1.HADA) || defensivo.getTipo2().equals(Tipo2.HADA)) && (defensivo.getTipo1().equals(Tipo1.VENENO)|| defensivo.getTipo2().equals(Tipo2.VENENO)|| defensivo.getTipo1().equals(Tipo1.TIERRA) || defensivo.getTipo2().equals(Tipo2.TIERRA) || defensivo.getTipo2().equals(Tipo2.ROCA) || defensivo.getTipo1().equals(Tipo1.ROCA)||defensivo.getTipo1().equals(Tipo1.FANTASMA)||defensivo.getTipo2().equals(Tipo2.FANTASMA))) {
+                eficacia = 1;
+            }
+            if ((defensivo.getTipo1().equals(Tipo1.PLANTA)|| defensivo.getTipo2().equals(Tipo2.PLANTA)|| defensivo.getTipo1().equals(Tipo1.BICHO) || defensivo.getTipo2().equals(Tipo2.BICHO))) {
+                eficacia = 0.5;
+            }
+
+            if (( defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo1().equals(Tipo1.BICHO)) && (defensivo.getTipo2().equals(Tipo2.PLANTA) || defensivo.getTipo2().equals(Tipo2.BICHO) )) {
+                eficacia = 0.25;
+            }
+
+            if (defensivo.getTipo1().equals(Tipo1.VOLADOR) || defensivo.getTipo1().equals(Tipo2.VOLADOR)) {
+                eficacia = 0;
+
+            } else {
+                eficacia = 1;
+            }
+        }else if (movimiento.getTipo1().equals(Tipo1.TIERRA)) {
+
+            if ((defensivo.getTipo1().equals(Tipo1.FUEGO) || defensivo.getTipo1().equals(Tipo1.ROCA) || defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo1().equals(Tipo1.ACERO)) && (defensivo.getTipo2().equals(Tipo2.FUEGO) || defensivo.getTipo2().equals(Tipo2.ROCA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.ACERO))) {
+                eficacia = 4;
+            }
+
+            if (defensivo.getTipo1().equals(Tipo1.FUEGO) || defensivo.getTipo2().equals(Tipo2.FUEGO) || defensivo.getTipo1().equals(Tipo1.ROCA) || defensivo.getTipo2().equals(Tipo2.ROCA) || defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo1().equals(Tipo1.ACERO) || defensivo.getTipo2().equals(Tipo2.ACERO) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO)) {
+                eficacia = 2;
+            }
+
+            if ((defensivo.getTipo1().equals(Tipo1.FUEGO) || defensivo.getTipo1().equals(Tipo1.ROCA) || defensivo.getTipo1().equals(Tipo1.VENENO) || defensivo.getTipo1().equals(Tipo1.ACERO) || defensivo.getTipo1().equals(Tipo1.ELECTRICO) || defensivo.getTipo2().equals(Tipo2.FUEGO) || defensivo.getTipo2().equals(Tipo2.ROCA) || defensivo.getTipo2().equals(Tipo2.VENENO) || defensivo.getTipo2().equals(Tipo2.ACERO) || defensivo.getTipo2().equals(Tipo2.ELECTRICO)) && (defensivo.getTipo1().equals(Tipo1.PLANTA) || defensivo.getTipo1().equals(Tipo1.BICHO)  || defensivo.getTipo2().equals(Tipo2.BICHO)  || defensivo.getTipo2().equals(Tipo2.PLANTA) )) {
                 eficacia = 1;
             }
 
