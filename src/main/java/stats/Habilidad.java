@@ -1,4 +1,4 @@
-package Stats;
+package stats;
 
 public enum Habilidad {
 

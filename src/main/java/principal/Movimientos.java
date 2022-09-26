@@ -1,4 +1,6 @@
-import Moves.Movimiento;
+package principal;
+
+import moves.Movimiento;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

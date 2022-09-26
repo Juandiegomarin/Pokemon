@@ -1,18 +1,18 @@
-package Moves;
+package moves;
 
-import Stats.Tipo1;
+import stats.Tipo1;
 
 import java.util.Objects;
 
 public class Movimiento {
 
-    private allMoves move;
+    private AllMoves move;
     private Tipo1 tipo1;
     private Categoria categoria;
     private int potencia;
     private int precision;
 
-    public Movimiento(allMoves move, Tipo1 tipo1, Categoria categoria , int potencia, int precision) {
+    public Movimiento(AllMoves move, Tipo1 tipo1, Categoria categoria , int potencia, int precision) {
 
         this.tipo1 = tipo1;
         this.categoria = categoria;
@@ -39,11 +39,11 @@ public class Movimiento {
         this.categoria = categoria;
     }
 
-    public allMoves getMove() {
+    public AllMoves getMove() {
         return move;
     }
 
-    public void setMove(allMoves move) {
+    public void setMove(AllMoves move) {
         this.move = move;
     }
 

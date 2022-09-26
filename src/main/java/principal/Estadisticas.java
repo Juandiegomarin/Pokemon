@@ -1,4 +1,13 @@
-import Stats.*;
+package principal;
+
+import stats.Ataque;
+import stats.Ps;
+import stats.Velocidad;
+import stats.AtaqueEspecial;
+import stats.DefensaEspecial;
+import stats.Naturaleza;
+import stats.Habilidad;
+import stats.Defensa;
 
 import java.util.Objects;
 

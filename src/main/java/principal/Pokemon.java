@@ -1,5 +1,7 @@
-import Stats.Tipo1;
-import Stats.Tipo2;
+package principal;
+
+import stats.Tipo1;
+import stats.Tipo2;
 
 import java.util.Objects;
 
